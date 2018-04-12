@@ -1,4 +1,4 @@
-//coleta de dados
+//Coleta de Dados
 
 let aluno = {
     nome: process.argv [2],
