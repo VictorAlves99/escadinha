@@ -1,14 +1,20 @@
-let escada = document.querySelector("#degraus");
-let simbolo = document.querySelector("#simbolo");
+let inputCaracter = document.querySelector("#caracter");
+let inputTamanho = document.querySelector("#tamanho");
+
 let botao = document.querySelector("button");
 
 botao.onclick = function(){
-    let resultado = document.createElement("p");
-    while(escada > 0){
-        simbolo += 1;
-        escada--;
-        resultado.innerHTML = "simbolo";
+    let tamanho = inputTamanho.value;
+    let caracter = inputCaracter.value;
+    let i = 1;
+    let escadinha = "";
+    while(i <= tamanho){
+        
+        escadinha = escadinha + caracter;
+        let resposta = document.createElement("p");
+        resposta.innerHTML = escadinha;
+        let body = document.querySelector("body");
+        body.appendChild(resposta);
+        i++;
     }
-    let divResposta = document.querySelector("#resposta");
-    divResposta.appendChild(resultado);
 }
